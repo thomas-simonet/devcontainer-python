@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    web:
+        image: web
+        build:
+            context: ..
+            dockerfile: .devcontainer/Dockerfile
+            target: development
+        command: /bin/sh -c "while sleep 1000; do :; done"
+        ports:
+            - '8000:8000'
+        volumes:
+            - ..:/app
