@@ -12,3 +12,6 @@ services:
             - '8000:8000'
         volumes:
             - ..:/app
+            - type: bind
+              source: ../.devcontainer/.zsh_history
+              target: /home/dev-user/.zsh_history
